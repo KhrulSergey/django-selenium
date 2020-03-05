@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" verbose="10">
+  <test name="TestSet">
+    <classes>
+      <class name="com.django.ugasoft.tests.LoginAndCRUDBlogEntryTest" />
+    </classes>
+  </test>
+</suite>
