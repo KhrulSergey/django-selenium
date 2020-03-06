@@ -4,6 +4,7 @@ import com.django.ugasoft.repository.BlogEntryRepository;
 import com.django.ugasoft.service.BlogEntryService;
 import com.django.ugasoft.service.BlogEntryServiceImpl;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 

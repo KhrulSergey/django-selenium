@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
+
 @SpringBootTest(classes = Application.class)
 public class TestBase extends AbstractTestNGSpringContextTests {
 
@@ -19,7 +20,7 @@ public class TestBase extends AbstractTestNGSpringContextTests {
   protected WebDriver driver;
 
   @BeforeTest
-  public void setUp() {
+  public void setUp(){
     initDriver();
   }
 
@@ -31,6 +32,6 @@ public class TestBase extends AbstractTestNGSpringContextTests {
   public void initDriver() {
     driver = BrowserFactory.getDriver(browserType);
     driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
   }
 }
