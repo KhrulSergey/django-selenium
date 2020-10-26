@@ -1,36 +1,38 @@
-# Автоматизированное тестирование системы "Django Blog". 
-## Тест кейс "Login And CRUD BlogEntry"
-- Запустить тест кейс и формирование отчета можно командой из корневого каталога проекта: 
+# РђРІС‚РѕРјР°С‚РёР·РёСЂРѕРІР°РЅРЅРѕРµ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ СЃРёСЃС‚РµРјС‹ "Django Blog". / Automated testing of the "Django Blog" system. 
+## РўРµСЃС‚ РєРµР№СЃ "Login And CRUD BlogEntry" / Test case "Login And CRUD BlogEntry"
+- Р—Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚ РєРµР№СЃ Рё С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕС‚С‡РµС‚Р° РјРѕР¶РЅРѕ РєРѕРјР°РЅРґРѕР№ РёР· РєРѕСЂРЅРµРІРѕРіРѕ РєР°С‚Р°Р»РѕРіР° РїСЂРѕРµРєС‚Р°: / You can start a test case and generate a report with a command from the root directory of the project:
  ```
 mvn clean test io.qameta.allure:allure-maven:serve
 ```
 
-При разработке тест кейса использован паттерн проектирования Page Object и Page Factory,
- а также Selenium WebDriver, TestNG и Spring Boot, Allure на Java (сборщик maven), который будет выполняет следующие тесты:
+РџСЂРё СЂР°Р·СЂР°Р±РѕС‚РєРµ С‚РµСЃС‚ РєРµР№СЃР° РёСЃРїРѕР»СЊР·РѕРІР°РЅ РїР°С‚С‚РµСЂРЅ РїСЂРѕРµРєС‚РёСЂРѕРІР°РЅРёСЏ Page Object Рё Page Factory,
+ Р° С‚Р°РєР¶Рµ Selenium WebDriver, TestNG Рё Spring Boot, Allure РЅР° Java (СЃР±РѕСЂС‰РёРє maven), РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅСЏРµС‚ СЃР»РµРґСѓСЋС‰РёРµ С‚РµСЃС‚С‹:
+The test case use the Page Object and Page Factory design patterns , as well as Selenium WebDriver, TestNG and Spring Boot, Allure in Java (maven collector):
  
-- Тест на открытие страницы авторизации в административную панель
-- Тест на авторизацию
-- Тест на открытие административной панели
-- Тест на переход на страницу создания новой записи в Блоге
-- Тест на открытие страницы создания новой записи в Блоге
-- Тест на заполнение (создание) новой записи в Блоге
-- Тест на существования созданной ранее записи в Блоге в административной панели
-- Тест на существования созданной ранее записи в Блоге на публичной странце
-- Тест на удаление ранее созданной записи в Блоге
-- Тест на выход из административной панели
+- РўРµСЃС‚ РЅР° РѕС‚РєСЂС‹С‚РёРµ СЃС‚СЂР°РЅРёС†С‹ Р°РІС‚РѕСЂРёР·Р°С†РёРё РІ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅСѓСЋ РїР°РЅРµР»СЊ / Test for opening the login page in the admin panel
+- РўРµСЃС‚ РЅР° Р°РІС‚РѕСЂРёР·Р°С†РёСЋ / Authorization test
+- РўРµСЃС‚ РЅР° РѕС‚РєСЂС‹С‚РёРµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕР№ РїР°РЅРµР»Рё / Test to open the admin panel
+- РўРµСЃС‚ РЅР° РїРµСЂРµС…РѕРґ РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ / Test for opening a new blog post creation page
+- РўРµСЃС‚ РЅР° РѕС‚РєСЂС‹С‚РёРµ СЃС‚СЂР°РЅРёС†С‹ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ / Test for filling (creating) a new blog post
+- РўРµСЃС‚ РЅР° Р·Р°РїРѕР»РЅРµРЅРёРµ (СЃРѕР·РґР°РЅРёРµ) РЅРѕРІРѕР№ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ / Test for filling (creating) a new blog post
+- РўРµСЃС‚ РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ СЃРѕР·РґР°РЅРЅРѕР№ СЂР°РЅРµРµ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ РІ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕР№ РїР°РЅРµР»Рё / Test for the existence of a previously created blog entry in the admin panel
+- РўРµСЃС‚ РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ СЃРѕР·РґР°РЅРЅРѕР№ СЂР°РЅРµРµ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ РЅР° РїСѓР±Р»РёС‡РЅРѕР№ СЃС‚СЂР°РЅС†Рµ / Test for the existence of a previously created blog post on a public page
+- РўРµСЃС‚ РЅР° СѓРґР°Р»РµРЅРёРµ СЂР°РЅРµРµ СЃРѕР·РґР°РЅРЅРѕР№ Р·Р°РїРёСЃРё РІ Р‘Р»РѕРіРµ / Test for deleting a previously created blog post
+- РўРµСЃС‚ РЅР° РІС‹С…РѕРґ РёР· Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕР№ РїР°РЅРµР»Рё / Test to exit the admin panel
 
- ## Получение исходного кода и старт проекта 
+ ## РџРѕР»СѓС‡РµРЅРёРµ РёСЃС…РѕРґРЅРѕРіРѕ РєРѕРґР° Рё СЃС‚Р°СЂС‚ РїСЂРѕРµРєС‚Р° / Obtaining the source code and starting the project 
  
-- Получить исходный код проекта командой
+- РџРѕР»СѓС‡РёС‚СЊ РёСЃС…РѕРґРЅС‹Р№ РєРѕРґ РїСЂРѕРµРєС‚Р° РєРѕРјР°РЅРґРѕР№ / Get the project source code by the team
  ```
  git clone https://github.com/KhrulSergey/django-selenium
  ```
-- Перейти в рабочую папку проекта
+- РџРµСЂРµР№С‚Рё РІ СЂР°Р±РѕС‡СѓСЋ РїР°РїРєСѓ РїСЂРѕРµРєС‚Р° / Go to the project working folder
 `cd .\django-selenium`
-- Запустить тесты командой
+- Р—Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚С‹ РєРѕРјР°РЅРґРѕР№ / Run tests with command
 `mvn clean test`
-- Запустить тесты вместе с формирование отчета командой
+- Р—Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚С‹ РІРјРµСЃС‚Рµ СЃ С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕС‚С‡РµС‚Р° РєРѕРјР°РЅРґРѕР№ / Run tests along with generating a report with the command
 `mvn clean test io.qameta.allure:allure-maven:serve`
 
- ## Конфигурация тест кейса
- Конфигурация находится в файле `src/main/resources/application.properties`
+ ## РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ С‚РµСЃС‚ РєРµР№СЃР° / Test case configuration
+ РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РЅР°С…РѕРґРёС‚СЃСЏ РІ С„Р°Р№Р»Рµ / The configuration is file
+ `src/main/resources/application.properties`
